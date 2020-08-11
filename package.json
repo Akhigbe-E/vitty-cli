@@ -1,0 +1,28 @@
+{
+  "name": "vitty-cli",
+  "version": "1.0.0",
+  "description": "A simple cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Git",
+    "CLI"
+  ],
+  "author": "Emmanuel Akhigbe",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/auth-basic": "^1.4.6",
+    "@octokit/rest": "^18.0.3",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "configstore": "^5.0.1",
+    "figlet": "^1.5.0",
+    "inquirer": "^7.3.3",
+    "lodash": "^4.17.19",
+    "minimist": "^1.2.5",
+    "simple-git": "^2.17.0",
+    "touch": "^3.1.0"
+  }
+}
