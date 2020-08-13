@@ -13,10 +13,18 @@ console.log(
         figlet.textSync('vittli', { horizontalLayout: 'full' })
     )
 )
-// if (files.hasDirectory('.git')) {
-//     console.log(chalk.red('Already a Git repository!'));
-//     process.exit();
-// }
+const getGithubToken = async () => {
+    // Fetch token from config store
+    let token = github.getStoredGithubToken();
+    if (token) {
+        return token;
+    }
+
+    // No token found, use credentials to access GitHub account
+    token = await github.getPersonalAccesToken();
+
+    return token;
+};
 
 const run = async () => {
     let token = github.getStoredGithubToken();
